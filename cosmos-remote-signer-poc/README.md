@@ -8,6 +8,15 @@ This is a minimal remote signer prototype for CometBFT.
 - Vote extension support (stub)
 - Basic slashing protection logic
 
+## Architecture
+Client → TCP → Remote Signer → Signature Response
+
+The signer:
+- validates request
+- enforces slashing protection rules
+- signs vote bytes using ed25519
+- returns signature + public key
+
 ## Important
 This is NOT production-ready.
 
