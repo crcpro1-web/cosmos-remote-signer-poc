@@ -70,3 +70,22 @@ go run main.go signer.go types.go
 ```bash
 echo '{"type":"sign_vote","sign_bytes":"dGVzdA==","height":10,"round":0,"step":"precommit"}' | nc localhost 26659
 ```
+⚠️ Security Warning / Disclaimer
+
+This repository contains a Proof-of-Concept (PoC) implementation of a Cosmos/CometBFT remote signer.
+
+Important notes:
+
+Do not use real validator keys in this repository.
+
+.pem, .der, and state.json files are excluded via .gitignore and should never be committed.
+
+This code is not production-ready:
+
+No TLS or authentication
+
+No secure key storage
+
+No full slashing protection
+
+Use this PoC only for testing, learning, or demonstration purposes.
